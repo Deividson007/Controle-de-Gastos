@@ -37,6 +37,14 @@
             border-bottom-left-radius: 0;
         }
 
+        .form-signin input[type="text"] {
+            margin-bottom: -1px;
+            border-bottom-right-radius: 0;
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+
         .form-signin input[type="password"] {
             margin-bottom: 10px;
             border-top-left-radius: 0;
@@ -52,18 +60,22 @@
         <br />
         <?= form_open("auth/autenticar") ?>
             <?= img("public/images/charmander.png", false, ["class" => "mb-4", "width" => 72]) ?>
-            <h1 class="h3 mb-3 fw-normal">Login</h1>
+            <h1 class="h3 mb-3 fw-normal">Cadastro</h1>
 
             <div class="form-floating">
                 <input type="email" class="form-control" id="floatingInput" name="email" placeholder="name@example.com">
                 <label for="floatingInput">Email</label>
             </div>
             <div class="form-floating">
+                <input type="text" class="form-control" id="floatingInput" name="nome" placeholder="nome">
+                <label for="floatingInput">Nome</label>
+            </div>
+            <div class="form-floating">
                 <input type="password" class="form-control" id="floatingPassword" name="senha" placeholder="Password">
                 <label for="floatingPassword">Senha</label>
             </div>
            
-            <button class="w-100 btn btn-lg btn-secondary" type="submit">Entrar</button>
+            <button class="w-100 btn btn-lg btn-secondary" type="submit">Gravar</button>
             <p class="mt-5 mb-3 text-muted">&copy; <?= date("Y") ?> - Deividson</p>
         </form>
     </main>
