@@ -2,13 +2,17 @@
 
 namespace Config;
 
+use App\Controllers\Auth;
+use App\Controllers\Cadastro;
+use App\Controllers\Home;
+
 // Create a new instance of our RouteCollection class.
 $routes = Services::routes();
 
-// Load the system's routing file first, so that the app and ENVIRONMENT
+// Load the system"s routing file first, so that the app and ENVIRONMENT
 // can override as needed.
-if (is_file(SYSTEMPATH . 'Config/Routes.php')) {
-    require SYSTEMPATH . 'Config/Routes.php';
+if (is_file(SYSTEMPATH . "Config/Routes.php")) {
+    require SYSTEMPATH . "Config/Routes.php";
 }
 
 /*
@@ -16,14 +20,14 @@ if (is_file(SYSTEMPATH . 'Config/Routes.php')) {
  * Router Setup
  * --------------------------------------------------------------------
  */
-$routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('Auth');
-$routes->setDefaultMethod('index');
+$routes->setDefaultNamespace("App\Controllers");
+$routes->setDefaultController("Auth");
+$routes->setDefaultMethod("index");
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
 // The Auto Routing (Legacy) is very dangerous. It is easy to create vulnerable apps
 // where controller filters or CSRF protection are bypassed.
-// If you don't want to define all routes, please use the Auto Routing (Improved).
+// If you don"t want to define all routes, please use the Auto Routing (Improved).
 // Set `$autoRoutesImproved` to true in `app/Config/Feature.php` and set the following to true.
 $routes->setAutoRoute(true);
 
@@ -34,9 +38,11 @@ $routes->setAutoRoute(true);
  */
 
 // We get a performance increase by specifying the default
-// route since we don't have to scan directories.
-$routes->get('/', 'Auth::index');
-$routes->post("/autenticar", "Auth::autenticar");
+// route since we don"t have to scan directories.
+$routes->get("/controle-de-gastos/login", [Auth::class, "index"]);
+$routes->post("auth/autenticar",  [Auth::class, "autenticar"]);
+$routes->get("/controle-de-gastos/cadastro", [Cadastro::class, "index"]);
+$routes->get("/home", [Home::class, "index"], ["filter" => "Auth"]);
 
 /*
  * --------------------------------------------------------------------
@@ -51,6 +57,6 @@ $routes->post("/autenticar", "Auth::autenticar");
  * You will have access to the $routes object within that file without
  * needing to reload it.
  */
-if (is_file(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php')) {
-    require APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php';
+if (is_file(APPPATH . "Config/" . ENVIRONMENT . "/Routes.php")) {
+    require APPPATH . "Config/" . ENVIRONMENT . "/Routes.php";
 }
