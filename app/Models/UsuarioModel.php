@@ -15,14 +15,19 @@ class UsuarioModel extends Model {
 
     public function login($dados) {
         $usuario = $this->where("email", $dados["email"])->where("senha", $this->hashValue($dados["senha"]))->first();
-        $usuario->exists = false;
+        $usuario["exists"] = false;
 
         if($usuario) {
-            $usuario->exists = true;
+            $usuario["exists"] = true;
             return $usuario;
         }
 
         return $usuario;
+    }
+
+    public function create($dados) {
+        $dados["senha"] = $this->hashValue($dados["senha"]);
+        return $this->save($dados);
     }
 
     private function hashValue($valor) {

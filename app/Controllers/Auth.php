@@ -34,11 +34,11 @@ class Auth extends BaseController
 
         $usuario = $usuarioModel->login($dados);
 
-        if ($usuario->exists) {
+        if ($usuario["exists"]) {
             $sessionData = [
-                "idUsuario" => $usuario->idUsuario,
-                "nome" => $usuario->nome,
-                "email" => $usuario->email,
+                "idUsuario" => $usuario["idUsuario"],
+                "nome" => $usuario["nome"],
+                "email" => $usuario["email"],
                 "logged_in" => true
             ];
 
@@ -48,13 +48,13 @@ class Auth extends BaseController
         }
 
         $session->setFlashdata("mensagem", "Email ou Senha inválidos");
-        return redirect()->to("/");
+        return redirect()->to("/login");
     }
 
     public function logout()
     {
         $session = session();
         $session->destroy();
-        return redirect()->to("/");
+        return redirect()->to("/login");
     }
 }

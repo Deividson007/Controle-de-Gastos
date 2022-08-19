@@ -58,7 +58,7 @@
         <?php echo \Config\Services::validation()->listErrors("c_list") ?>
         <?php if(isset($mensagem)) echo '<div class="alert alert-danger" role="alert">' . $mensagem . "</div>" ?>
         <br />
-        <?= form_open("auth/autenticar") ?>
+        <?= form_open("cadastro/create") ?>
             <?= img("public/images/charmander.png", false, ["class" => "mb-4", "width" => 72]) ?>
             <h1 class="h3 mb-3 fw-normal">Cadastro</h1>
 

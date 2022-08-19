@@ -42,7 +42,8 @@ $routes->setAutoRoute(true);
 $routes->get("/controle-de-gastos/login", [Auth::class, "index"]);
 $routes->post("auth/autenticar",  [Auth::class, "autenticar"]);
 $routes->get("/controle-de-gastos/cadastro", [Cadastro::class, "index"]);
-$routes->get("/home", [Home::class, "index"], ["filter" => "Auth"]);
+$routes->post("cadastro/create",  [Cadastro::class, "create"]);
+$routes->get("/controle-de-gastos/home", [Home::class, "index"], ["filter" => "Auth"]);
 
 /*
  * --------------------------------------------------------------------
