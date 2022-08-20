@@ -21,7 +21,7 @@ if (is_file(SYSTEMPATH . "Config/Routes.php")) {
  * --------------------------------------------------------------------
  */
 $routes->setDefaultNamespace("App\Controllers");
-$routes->setDefaultController("Auth");
+$routes->setDefaultController("AuthController");
 $routes->setDefaultMethod("index");
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
@@ -39,11 +39,11 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don"t have to scan directories.
-$routes->get("/controle-de-gastos/login", [Auth::class, "index"]);
-$routes->post("auth/autenticar",  [Auth::class, "autenticar"]);
-$routes->get("/controle-de-gastos/cadastro", [Cadastro::class, "index"]);
-$routes->post("cadastro/create",  [Cadastro::class, "create"]);
-$routes->get("/controle-de-gastos/home", [Home::class, "index"], ["filter" => "Auth"]);
+$routes->get("/login", [Auth::class, "index"]);
+$routes->post("/login/autenticar",  [Auth::class, "autenticar"]);
+$routes->get("/cadastro", [Cadastro::class, "index"]);
+$routes->post("/cadastro/create",  [Cadastro::class, "create"]);
+$routes->get("/home", [Home::class, "index"]);
 
 /*
  * --------------------------------------------------------------------

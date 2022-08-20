@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <?= link_tag("public/assets/Bootstrap/css/bootstrap.min.css") ?>
+    <?= link_tag("assets/Bootstrap/css/bootstrap.min.css") ?>
 
     <style>
         html,
@@ -59,7 +59,7 @@
         <?php if(isset($mensagem)) echo '<div class="alert alert-danger" role="alert">' . $mensagem . "</div>" ?>
         <br />
         <?= form_open("cadastro/create") ?>
-            <?= img("public/images/charmander.png", false, ["class" => "mb-4", "width" => 72]) ?>
+            <?= img("images/charmander.png", false, ["class" => "mb-4", "width" => 72]) ?>
             <h1 class="h3 mb-3 fw-normal">Cadastro</h1>
 
             <div class="form-floating">

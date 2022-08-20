@@ -24,7 +24,7 @@ class App extends BaseConfig
      *
      * @var string
      */
-    public $baseURL = 'http://localhost/controle-de-gastos/';
+    public $baseURL = 'http://localhost:9090';
 
     /**
      * --------------------------------------------------------------------------

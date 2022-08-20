@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <?= link_tag("public/assets/Bootstrap/css/bootstrap.min.css") ?>
+    <?= link_tag("assets/Bootstrap/css/bootstrap.min.css") ?>
 
     <style>
         html,
@@ -50,8 +50,8 @@
         <?php echo \Config\Services::validation()->listErrors("c_list") ?>
         <?php if(isset($mensagem)) echo '<div class="alert alert-danger" role="alert">' . $mensagem . "</div>" ?>
         <br />
-        <?= form_open("auth/autenticar") ?>
-            <?= img("public/images/bulbasauro.png", false, ["class" => "mb-4", "width" => 72]) ?>
+        <?= form_open("login/autenticar") ?>
+            <?= img("images/bulbasauro.png", false, ["class" => "mb-4", "width" => 72]) ?>
             <h1 class="h3 mb-3 fw-normal">Login</h1>
 
             <div class="form-floating">

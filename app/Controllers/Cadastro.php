@@ -37,5 +37,8 @@ class Cadastro extends BaseController {
             $session->setFlashdata("mensagem", "Usuário criado com sucesso!");
             return redirect()->to("/login");
         }
+
+        $session->setFlashdata("mensagem", "Não foi possível criar o usuário!");
+        return view("cadastro/index");
     }
 }
