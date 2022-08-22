@@ -5,6 +5,7 @@ namespace Config;
 use App\Controllers\Auth;
 use App\Controllers\Cadastro;
 use App\Controllers\Home;
+use App\Controllers\Controle;
 
 // Create a new instance of our RouteCollection class.
 $routes = Services::routes();
@@ -43,7 +44,8 @@ $routes->get("/login", [Auth::class, "index"]);
 $routes->post("/login/autenticar",  [Auth::class, "autenticar"]);
 $routes->get("/cadastro", [Cadastro::class, "index"]);
 $routes->post("/cadastro/create",  [Cadastro::class, "create"]);
-$routes->get("/home", [Home::class, "index"]);
+$routes->get("/controle", [Controle::class, "index"]);
+$routes->get("/tipogasto", [Controle::class, "index"]);
 
 /*
  * --------------------------------------------------------------------

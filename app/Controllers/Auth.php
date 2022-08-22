@@ -44,7 +44,7 @@ class Auth extends BaseController
 
             $session->set($sessionData);
 
-            return redirect()->to("/home");
+            return redirect()->to("/controle");
         }
 
         $session->setFlashdata("mensagem", "Email ou Senha inválidos");
