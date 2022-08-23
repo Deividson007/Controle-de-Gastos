@@ -39,7 +39,7 @@
                         <hr class="d-lg-none text-white-50">
                         <ul class="navbar-nav flex-row flex-wrap bd-navbar-nav">
                             <li class="nav-item col-6 col-lg-auto">
-                                <?= anchor("/controle", "Controle", ["class" => "nav-link py-2 px-0 px-lg-2", "aria-current" => "true"]) ?>
+                                <?= anchor("/controle", "Controle", ["class" => "nav-link py-2 px-0 px-lg-2 text-dark", "aria-current" => "true"]) ?>
                             </li>
                         </ul>
                         <hr class="d-lg-none text-white-50">
