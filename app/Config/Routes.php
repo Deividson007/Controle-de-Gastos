@@ -4,7 +4,6 @@ namespace Config;
 
 use App\Controllers\Auth;
 use App\Controllers\Cadastro;
-use App\Controllers\Home;
 use App\Controllers\Controle;
 
 // Create a new instance of our RouteCollection class.

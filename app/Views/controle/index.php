@@ -12,7 +12,11 @@
 
 <div class="row">
     <div class="col-md-4 col-sm-6">
-        <canvas id="myChart"></canvas>
+        <div class="card">
+            <div class="card-body">
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
     </div>
 </div>
 
