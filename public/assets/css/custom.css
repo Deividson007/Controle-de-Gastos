@@ -2,8 +2,33 @@
     --ct-text-title-color: #6c757d;
     --ct-page-title-color: #6c757d;
 
+    --base-color-nav: #e2c43f;
+    --base-color-nav-rgb: 226, 196, 63;
+
+    --base-color-body: #E0DCDD;
+    --base-color-body-rgb: 224, 220, 221;
+
     --bd-violet: #E0DCDD;
     --bd-violet-rgb: 224, 220, 221;
+
+    --base-color-vermelho: #C2151B;
+    --base-color-vermelho-rgb: 194, 21, 27;
+
+    --base-color-azul: #2021A0;
+    --base-color-azul-rgb: 32, 33, 160;
+
+    --base-color-azul-c: #3547B3;
+    --base-color-azul-c-rgb: 53, 71, 179;
+
+    --base-color-amarelo: #E2C43F;
+    --base-color-amarelo-rgb: 226, 196, 63;
+
+    --base-color-cinza: #E0DCDD;
+    --base-color-cinza-rgb: 224, 220, 221;
+}
+
+.page {
+    background-color: var(--base-color-body);
 }
 
 .page-title-box .page-title {
@@ -96,8 +121,12 @@
 .bd-navbar {
     padding: 0.75rem 0;
     background-color: transparent;
-    background-image: linear-gradient(to bottom, rgba(var(--bd-violet-rgb), 1), rgba(var(--bd-violet-rgb), 0.95));
+    background-image: linear-gradient(to bottom, rgba(var(--base-color-nav-rgb), 1), rgba(var(--base-color-nav-rgb), 0.75));
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15), inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+}
+.bd-navbar-mobile {
+    background-color: transparent;
+    background-image: linear-gradient(to bottom, rgba(var(--base-color-nav-rgb), 1), rgba(var(--base-color-nav-rgb), 0.75));
 }
 .bd-navbar .navbar-toggler {
     padding: 0;
@@ -168,4 +197,35 @@
 }
 .bd-gutter {
     --bs-gutter-x: 3rem;
+}
+
+.c-vermelho {
+    background-color: var(--base-color-vermelho);
+}
+.c-vermelho-alpha {
+    background-color: rgba(var(--base-color-vermelho-rgb), .5);
+}
+.c-amarelo {
+    background-color: var(--base-color-amarelo);
+}
+.c-amarelo-alpha {
+    background-color: rgba(var(--base-color-amarelo-rgb), .5);
+}
+.c-azul {
+    background-color: var(--base-color-azul);
+}
+.c-azul-alpha {
+    background-color: rgba(var(--base-color-azul-rgb), .5);
+}
+.c-azul-c {
+    background-color: var(--base-color-azul-c);
+}
+.c-azul-c-alpha {
+    background-color: rgba(var(--base-color-azul-c-rgb), .5);
+}
+.c-cinza {
+    background-color: var(--base-color-cinza);
+}
+.c-cinza-alpha {
+    background-color: rgba(var(--base-color-cinza-rgb), .5);
 }

@@ -12,28 +12,25 @@
 
     <?= script_tag("assets/Bootstrap/js/bootstrap.bundle.min.js") ?>
     <?= script_tag("assets/chart/chart.min.js"); ?>
+    <?= script_tag("assets/axios/axios.min.js"); ?>
 </head>
 
-<body>
+<body class="page">
     <section>
         <header class="navbar navbar-expand-lg bd-navbar">
-            <nav class="container-xxl bd-gutter flex-wrap flex-lg-nowrap">
-                <button type="button" class="navbar-toggler p-2" data-bs-toggle="offcanvas" data-bs-target="#bdSidebar" aria-controls="bdSidebar">
-                    <i class="bi bi-list"></i>
-                </button>
-
+            <nav class="container-fluid bd-gutter flex-wrap flex-lg-nowrap">
                 <a href="#" class="navbar-brand p-0 me-0 me-lg-2">
                     <?= img("images/blastoise.png", false, ["width" => 40]) ?>
                 </a>
 
-                <button type="button" class="navbar-toggler d-flex d-lg-none order-3 p-2" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar">
+                <button type="button" class="navbar-toggler d-flex d-lg-none order-3 p-2 text-dark" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar">
                     <i class="bi bi-three-dots"></i>
                 </button>
 
-                <div class="offcanvas-lg offcanvas-end flex-grow-1" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel" data-bs-scroll="true">
+                <div class="offcanvas-lg offcanvas-end flex-grow-1 bd-navbar-mobile" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel" data-bs-scroll="true">
                     <div class="offcanvas-header px-4 pb-0">
-                        <h5 class="offcanvas-title text-white" id="bdNavbarOffcanvasLabel">Controle de Gastos</h5>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdNavbar"></button>
+                        <h5 class="offcanvas-title text-dark" id="bdNavbarOffcanvasLabel">Controle de Gastos</h5>
+                        <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdNavbar"></button>
                     </div>
                     <div class="offcanvas-body p-4 pt-0 p-lg-0">
                         <hr class="d-lg-none text-white-50">
@@ -41,13 +38,24 @@
                             <li class="nav-item col-6 col-lg-auto">
                                 <?= anchor("/controle", "Controle", ["class" => "nav-link py-2 px-0 px-lg-2 text-dark", "aria-current" => "true"]) ?>
                             </li>
+                            <li class="nav-item col-6 col-lg-auto dropdown">
+                                <button type="button" class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle text-dark" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">Cadastro</button>
+                                <ul class="dropdown-menu dropdown-menu-end" data-bs-popper="static">
+                                    <li>
+                                        <a href="/dados-bancarios" class="dropdown-item" aria-current="true">Dados Bancários</a>
+                                    </li>
+                                    <li>
+                                        <a href="/tipo-gasto" class="dropdown-item" aria-current="true">Tipo Gasto</a>
+                                    </li>
+                                </ul>
+                            </li>
                         </ul>
                         <hr class="d-lg-none text-white-50">
                         <ul class="navbar-nav flex-row flex-wrap ms-md-auto">
                             <li class="nav-item dropdown">
-                                <button type="button" class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
-                                    <span class="d-lg-none" aria-hidden="true">Usuário</span>
-                                    <span class="visually-hidden">Usuário&nbsp;</span>
+                                <button type="button" class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle text-dark" data-bs-toggle="dropdown" aria-expanded="false" data-bs-display="static">
+                                    <span class="d-lg-none text-dark" aria-hidden="true">Usuário</span>
+                                    <span class="visually-hidden text-dark">Usuário&nbsp;</span>
                                     <?= img("images/user.png", false, ["width" => 30, "class" => "rounded-circle bg-white"]) ?>
                                 </button>
                                 <ul class="dropdown-menu dropdown-menu-end" data-bs-popper="static">

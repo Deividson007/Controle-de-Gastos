@@ -5,6 +5,8 @@ namespace Config;
 use App\Controllers\Auth;
 use App\Controllers\Cadastro;
 use App\Controllers\Controle;
+use App\Controllers\DadosBancarios;
+use App\Controllers\TipoGasto;
 
 // Create a new instance of our RouteCollection class.
 $routes = Services::routes();
@@ -44,7 +46,12 @@ $routes->post("/login/autenticar",  [Auth::class, "autenticar"]);
 $routes->get("/cadastro", [Cadastro::class, "index"]);
 $routes->post("/cadastro/create",  [Cadastro::class, "create"]);
 $routes->get("/controle", [Controle::class, "index"]);
-$routes->get("/tipogasto", [Controle::class, "index"]);
+$routes->get("/dados-bancarios", [DadosBancarios::class, "index"]);
+$routes->post("/dados-bancarios/create", [DadosBancarios::class, "create"]);
+$routes->get("/dados-bancarios/remove/(:num)", [DadosBancarios::class, "remove"]);
+$routes->get("/tipo-gasto", [TipoGasto::class, "index"]);
+$routes->post("/tipo-gasto/create", [TipoGasto::class, "create"]);
+$routes->get("/tipo-gasto/remove/(:num)", [TipoGasto::class, "remove"]);
 
 /*
  * --------------------------------------------------------------------
