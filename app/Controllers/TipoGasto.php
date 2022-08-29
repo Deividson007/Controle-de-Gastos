@@ -51,6 +51,5 @@ class TipoGasto extends BaseController
             ];
             return view("tipoGasto/index", $viewData);
         }
-
     }
 }

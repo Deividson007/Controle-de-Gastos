@@ -11,6 +11,38 @@
 </div>
 
 <div class="row">
+    <div class="col-1">
+        <?= anchor("/controle/novo", "+", ["class" => "btn btn-outline-primary rounded-circle"]) ?>
+    </div>
+</div>
+
+<br>
+
+<div class="row">
+    <div class="col-md-6 col-sm-12">
+        <div class="card">
+            <div class="card-body">
+                <table class="table table-bordered table-striped table-sm">
+                    <thead>
+                        <tr>
+                            <th>Data</th>
+                            <th>Tipo</th>
+                            <th>Descrição</th>
+                            <th>Valor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br>
+
+<div class="row">
     <div class="col-md-4 col-sm-6">
         <div class="card">
             <div class="card-body">

@@ -4,9 +4,9 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class TipoGastoModel extends Model {
-    protected $table = "tipoGasto";
-    protected $primaryKey = "idTipoGasto";
+class FormaPagamentoModel extends Model {
+    protected $table = "formaPagamento";
+    protected $primaryKey = "idFormaPagamento";
     protected $allowedFields = [
         "descricao"
     ];
@@ -22,7 +22,7 @@ class TipoGastoModel extends Model {
 
     public function selectList() {
         $result = $this
-                    ->select("idTipoGasto, descricao")
+                    ->select("idFormaPagamento, descricao")
                     ->where("ativo", 1)   
                     ->get()
                     ->getResult();
@@ -30,13 +30,13 @@ class TipoGastoModel extends Model {
         $list = array();
         $list[""] = "-- SELECIONE --";
         foreach($result as $res) {
-            $list[$res->idTipoGasto] = $res->descricao;
+            $list[$res->idFormaPagamento] = $res->descricao;
         }
 
         return $list;
     }
 
     public function remove($id) {
-        return $this->update(["idTipoGasto" => $id], ["ativo" => 0]);
+        return $this->update(["idFormaPagamento" => $id], ["ativo" => 0]);
     }
 }

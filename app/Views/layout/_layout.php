@@ -47,6 +47,9 @@
                                     <li>
                                         <a href="/tipo-gasto" class="dropdown-item" aria-current="true">Tipo Gasto</a>
                                     </li>
+                                    <li>
+                                        <a href="/forma-pagamento" class="dropdown-item" aria-current="true">Forma Pagamento</a>
+                                    </li>
                                 </ul>
                             </li>
                         </ul>

@@ -1,0 +1,199 @@
+CRITICAL - 2022-08-28 00:39:38 --> Object of class stdClass could not be converted to string
+in SYSTEMPATH\Helpers\form_helper.php on line 331.
+ 1 APPPATH\Views\controle\novo.php(24): form_dropdown('tipo', [...], [], ' class="form-select"')
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\controle\\novo.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('controle/novo', [], true)
+ 5 APPPATH\Controllers\Controle.php(19): view('controle/novo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Controle->novo()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controle))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-28 00:40:02 --> Object of class stdClass could not be converted to string
+in SYSTEMPATH\Helpers\form_helper.php on line 331.
+ 1 APPPATH\Views\controle\novo.php(24): form_dropdown('tipo', [...], [...], ' class="form-select"')
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\controle\\novo.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('controle/novo', [], true)
+ 5 APPPATH\Controllers\Controle.php(19): view('controle/novo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Controle->novo()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controle))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-08-28 21:32:20 --> Error connecting to the database: mysqli_sql_exception: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente in C:\xampp\htdocs\controle\system\Database\MySQLi\Connection.php:171
+Stack trace:
+#0 C:\xampp\htdocs\controle\system\Database\MySQLi\Connection.php(171): mysqli->real_connect('127.0.0.1', 'root', '', 'controlegastos', 3306, '', 0)
+#1 C:\xampp\htdocs\controle\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\controle\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\controle\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\controle\system\Model.php(249): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\controle\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\controle\app\Models\UsuarioModel.php(17): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\controle\app\Controllers\Auth.php(35): App\Models\UsuarioModel->login(Array)
+#8 C:\xampp\htdocs\controle\system\CodeIgniter.php(898): App\Controllers\Auth->autenticar()
+#9 C:\xampp\htdocs\controle\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#10 C:\xampp\htdocs\controle\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\controle\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\controle\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente in C:\xampp\htdocs\controle\system\Database\MySQLi\Connection.php:215
+Stack trace:
+#0 C:\xampp\htdocs\controle\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\controle\system\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\controle\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\controle\system\Model.php(249): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\controle\system\BaseModel.php(622): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\controle\app\Models\UsuarioModel.php(17): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\controle\app\Controllers\Auth.php(35): App\Models\UsuarioModel->login(Array)
+#7 C:\xampp\htdocs\controle\system\CodeIgniter.php(898): App\Controllers\Auth->autenticar()
+#8 C:\xampp\htdocs\controle\system\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#9 C:\xampp\htdocs\controle\system\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\controle\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\controle\system\Commands\Server\rewrite.php(43): require_once('C:\\xampp\\htdocs...')
+#12 {main}
+CRITICAL - 2022-08-28 21:32:20 --> Unable to connect to the database.
+Main connection [MySQLi]: Nenhuma conexão pôde ser feita porque a máquina de destino as recusou ativamente
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(588): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `usuario`
+WHERE `email` = :email:
+AND `senha` = :senha:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(249): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(622): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\UsuarioModel.php(17): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\Auth.php(35): App\Models\UsuarioModel->login([...])
+ 7 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Auth->autenticar()
+ 8 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-28 21:32:51 --> Object of class stdClass could not be converted to string
+in SYSTEMPATH\Helpers\form_helper.php on line 331.
+ 1 APPPATH\Views\controle\novo.php(24): form_dropdown('tipo', [...], [...], ' class="form-select"')
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\controle\\novo.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('controle/novo', [], true)
+ 5 APPPATH\Controllers\Controle.php(19): view('controle/novo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Controle->novo()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controle))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-28 21:38:18 --> Object of class stdClass could not be converted to string
+in SYSTEMPATH\Helpers\form_helper.php on line 331.
+ 1 APPPATH\Views\controle\novo.php(24): form_dropdown('tipo', [...], [...], ' class="form-select"')
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\controle\\novo.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('controle/novo', [], true)
+ 5 APPPATH\Controllers\Controle.php(19): view('controle/novo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Controle->novo()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controle))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-28 21:56:51 --> Object of class stdClass could not be converted to string
+in SYSTEMPATH\Helpers\form_helper.php on line 331.
+ 1 APPPATH\Views\controle\novo.php(24): form_dropdown('tipo', [...], [...], ' class="form-select"')
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\controle\\novo.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('controle/novo', [], true)
+ 5 APPPATH\Controllers\Controle.php(19): view('controle/novo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Controle->novo()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controle))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-28 21:56:54 --> Object of class stdClass could not be converted to string
+in SYSTEMPATH\Helpers\form_helper.php on line 331.
+ 1 APPPATH\Views\controle\novo.php(24): form_dropdown('tipo', [...], [...], ' class="form-select"')
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\controle\\novo.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('controle/novo', [], true)
+ 5 APPPATH\Controllers\Controle.php(19): view('controle/novo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Controle->novo()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controle))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-28 21:58:33 --> Object of class stdClass could not be converted to string
+in SYSTEMPATH\Helpers\form_helper.php on line 331.
+ 1 APPPATH\Views\controle\novo.php(24): form_dropdown('tipo', [...], [...], ' class="form-select"')
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\controle\\novo.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('controle/novo', [], true)
+ 5 APPPATH\Controllers\Controle.php(20): view('controle/novo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Controle->novo()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controle))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-28 22:05:59 --> Object of class stdClass could not be converted to string
+in SYSTEMPATH\Helpers\form_helper.php on line 331.
+ 1 APPPATH\Views\controle\novo.php(24): form_dropdown('tipo', [...], [...], ' class="form-select"')
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\controle\\novo.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('controle/novo', [], true)
+ 5 APPPATH\Controllers\Controle.php(22): view('controle/novo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Controle->novo()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controle))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-28 22:06:11 --> Object of class stdClass could not be converted to string
+in SYSTEMPATH\Helpers\form_helper.php on line 331.
+ 1 APPPATH\Views\controle\novo.php(24): form_dropdown('tipo', [...], [...], ' class="form-select"')
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\controle\\novo.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('controle/novo', [], true)
+ 5 APPPATH\Controllers\Controle.php(22): view('controle/novo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Controle->novo()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controle))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-28 22:07:08 --> Object of class stdClass could not be converted to string
+in SYSTEMPATH\Helpers\form_helper.php on line 331.
+ 1 APPPATH\Views\controle\novo.php(24): form_dropdown('tipo', [...], [...], ' class="form-select"')
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\controle\\novo.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('controle/novo', [], true)
+ 5 APPPATH\Controllers\Controle.php(22): view('controle/novo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Controle->novo()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controle))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-28 22:07:12 --> Object of class stdClass could not be converted to string
+in SYSTEMPATH\Helpers\form_helper.php on line 331.
+ 1 APPPATH\Views\controle\novo.php(24): form_dropdown('tipo', [...], [...], ' class="form-select"')
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\controle\\novo.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('controle/novo', [], true)
+ 5 APPPATH\Controllers\Controle.php(22): view('controle/novo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Controle->novo()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controle))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-28 22:07:39 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::result()
+in APPPATH\Models\TipoGastoModel.php on line 28.
+ 1 APPPATH\Controllers\Controle.php(17): App\Models\TipoGastoModel->selectList()
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Controle->novo()
+ 3 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controle))
+ 4 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-28 22:07:55 --> Undefined property: stdClass::$descricao
+in APPPATH\Models\TipoGastoModel.php on line 33.
+ 1 APPPATH\Models\TipoGastoModel.php(33): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$descricao', 'APPPATH\\Models\\TipoGastoModel.php', 33)
+ 2 APPPATH\Controllers\Controle.php(17): App\Models\TipoGastoModel->selectList()
+ 3 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Controle->novo()
+ 4 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controle))
+ 5 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
