@@ -11,6 +11,13 @@
 </div>
 
 <div class="row">
+    <div class="col-12 text-center">
+        <?php echo \Config\Services::validation()->listErrors("c_list") ?>
+        <?php if(isset($mensagem)) echo '<div class="alert alert-danger" role="alert">' . $mensagem . "</div>" ?>
+    </div>
+</div>
+
+<div class="row">
     <div class="col-12">
         <div class="card">
             <div class="card-body">
@@ -39,7 +46,7 @@
                         <label for="txtDescricao" class="form-label">Parcelado</label>
                         <div class="input-group mb-3">
                             <div class="input-group-text">
-                                <input class="form-check-input mt-0" type="checkbox" value="true" id="parcelado" name="parcelado" onclick="cn.ativoParcelado()">
+                                <input class="form-check-input mt-0" type="checkbox" value="1" id="parcelado" name="parcelado" onclick="cn.ativoParcelado()">
                             </div>
                             <input type="number" class="form-control" id="numeroParcelas" name="numeroParcelas" aria-label="Text input with checkbox" disabled>
                         </div>
@@ -78,8 +85,5 @@
         }
     }
 </script>
-
-
-
 
 <?= $this->endSection() ?>

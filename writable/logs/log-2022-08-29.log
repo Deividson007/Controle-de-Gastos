@@ -1,0 +1,12 @@
+CRITICAL - 2022-08-29 18:59:19 --> Undefined variable $optionsTipo
+in APPPATH\Views\controle\novo.php on line 28.
+ 1 APPPATH\Views\controle\novo.php(28): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $optionsTipo', 'APPPATH\\Views\\controle\\novo.php', 28)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\controle\\novo.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('controle/novo', [], true)
+ 5 APPPATH\Controllers\Controle.php(39): view('controle/novo', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Controle->create()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Controle))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

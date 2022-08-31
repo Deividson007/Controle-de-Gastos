@@ -32,7 +32,14 @@
                         </tr>
                     </thead>
                     <tbody>
-        
+                        <?php foreach ($tabela as $t) : ?>
+                            <tr>
+                                <td><?= $t->data ?></td>
+                                <td><?= $t->tipo ?></td>
+                                <td><?= $t->descricao ?></td>
+                                <td><?= $t->valor ?></td>
+                            </tr>
+                        <?php endforeach; ?>
                     </tbody>
                 </table>
             </div>
