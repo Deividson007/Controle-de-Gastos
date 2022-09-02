@@ -52,4 +52,10 @@ class TipoGasto extends BaseController
             return view("tipoGasto/index", $viewData);
         }
     }
+
+    public function remove($id) {
+        $tipoGastoModel = new TipoGastoModel();
+        $tipoGastoModel->remove($id);
+        return redirect()->to("/tipo-gasto");
+    }
 }

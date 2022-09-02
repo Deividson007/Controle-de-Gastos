@@ -32,4 +32,8 @@ class GastoModel extends Model
 
         return $this->db->query($query, [1])->getResult();
     }
+
+    public function somaValor() {
+        return $this->select("SUM(valor) as valor", false)->first();
+    }
 }

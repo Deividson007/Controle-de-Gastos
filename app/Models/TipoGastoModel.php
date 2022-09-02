@@ -37,6 +37,6 @@ class TipoGastoModel extends Model {
     }
 
     public function remove($id) {
-        return $this->update(["idTipoGasto" => $id], ["ativo" => 0]);
+        $this->builder()->set("ativo", 0)->where("idTipoGasto", $id)->update();
     }
 }

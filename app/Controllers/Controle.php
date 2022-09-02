@@ -11,7 +11,8 @@ class Controle extends BaseController {
         $gastoModel = new GastoModel();
         
         $viewData = [
-            "tabela" => $gastoModel->getMesAtual()
+            "tabela" => $gastoModel->getMesAtual(),
+            "total" => $gastoModel->somaValor()
         ];
 
         return view("controle/index", $viewData);
@@ -56,7 +57,7 @@ class Controle extends BaseController {
 
         $dados = [
             "data" => $this->request->getPost("data"),
-            "valor" => $this->request->getPost("valor"),
+            "valor" => str_replace(",", ".", str_replace(".", "", $this->request->getPost("valor"))),
             "idTipoGasto" => $this->request->getPost("tipo"),
             "idFormaPagamento" => $this->request->getPost("forma"),
             "descricao" => $this->request->getPost("descricao"),
