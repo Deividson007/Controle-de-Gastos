@@ -57,6 +57,9 @@
                                     <li>
                                         <a href="/forma-pagamento" class="dropdown-item" aria-current="true">Forma Pagamento</a>
                                     </li>
+                                    <li>
+                                        <a href="/entrada" class="dropdown-item" aria-current="true">Entradas</a>
+                                    </li>
                                 </ul>
                             </li>
                         </ul>

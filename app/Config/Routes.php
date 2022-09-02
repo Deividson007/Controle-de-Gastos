@@ -6,6 +6,7 @@ use App\Controllers\Auth;
 use App\Controllers\Cadastro;
 use App\Controllers\Controle;
 use App\Controllers\DadosBancarios;
+use App\Controllers\Entrada;
 use App\Controllers\FormaPagamento;
 use App\Controllers\TipoGasto;
 
@@ -42,6 +43,7 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don"t have to scan directories.
+$routes->get("/", [Auth::class, "index"]);
 $routes->get("/login", [Auth::class, "index"]);
 $routes->post("/login/autenticar",  [Auth::class, "autenticar"]);
 $routes->get("/cadastro", [Cadastro::class, "index"]);
@@ -58,6 +60,10 @@ $routes->get("/tipo-gasto/remove/(:num)", [TipoGasto::class, "remove"]);
 $routes->get("/forma-pagamento", [FormaPagamento::class, "index"]);
 $routes->post("/forma-pagamento/create", [FormaPagamento::class, "create"]);
 $routes->get("/forma-pagamento/remove/(:num)", [FormaPagamento::class, "remove"]);
+$routes->get("/entrada", [Entrada::class, "index"]);
+$routes->get("/entrada/novo", [Entrada::class, "novo"]);
+$routes->post("/entrada/create", [Entrada::class, "create"]);
+$routes->get("/entrada/remove/(:num)", [Entrada::class, "remove"]);
 
 /*
  * --------------------------------------------------------------------

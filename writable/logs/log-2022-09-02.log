@@ -1,0 +1,22 @@
+CRITICAL - 2022-09-02 18:54:58 --> Arquivo inválido: entrada/view.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('entrada/view.php')
+ 2 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('entrada/view', [], true)
+ 3 APPPATH\Controllers\Entrada.php(8): view('entrada/view')
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Entrada->index()
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Entrada))
+ 6 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-09-02 18:55:12 --> Undefined variable $entradas
+in APPPATH\Views\entrada\index.php on line 32.
+ 1 APPPATH\Views\entrada\index.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $entradas', 'APPPATH\\Views\\entrada\\index.php', 32)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\entrada\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1137): CodeIgniter\View\View->render('entrada/index', [], true)
+ 5 APPPATH\Controllers\Entrada.php(8): view('entrada/index')
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Entrada->index()
+ 7 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Entrada))
+ 8 SYSTEMPATH\CodeIgniter.php(340): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
