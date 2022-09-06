@@ -39,10 +39,10 @@
                     <tbody>
                         <?php foreach ($entradas as $db) : ?>
                             <tr>
-                                <td><?= $db->dataEntrada ?></td>
-                                <td><?= $db->valor ?></td>
+                                <td><?= date("d/m/Y", strtotime($db->dataEntrada)) ?></td>
+                                <td><?= number_format($db->valor, 2, ',', '.') ?></td>
                                 <td class="text-center">
-                                    <?= anchor("/dados-bancarios/remove/$db->idEntrada", "remover", ["class" => "btn btn-outline-danger btn-sm", "onclick" => "return entrada.confirma()"]) ?>
+                                    <?= anchor("/entrada/remove/$db->idEntrada", "remover", ["class" => "btn btn-outline-danger btn-sm", "onclick" => "return entrada.confirma()"]) ?>
                                 </td>
                             </tr>
                         <?php endforeach; ?>

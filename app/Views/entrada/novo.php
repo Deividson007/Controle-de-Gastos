@@ -25,7 +25,7 @@
                 <form action="/entrada/create" method="POST" class="row g-3">
                     <div class="col-md-4 col-sm-12">
                         <label for="txtData" class="form-label">Data</label>
-                        <input type="date" class="form-control" id="txtData" name="data" require>
+                        <input type="date" class="form-control" id="txtData" name="dataEntrada" require>
                     </div>
                     <div class="col-md-4 col-sm-12">
                         <label for="txtValor" class="form-label">Valor</label>

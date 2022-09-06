@@ -14,7 +14,22 @@ class EntradaModel extends Model {
         "ativo"
     ];
 
-    public function getEntrada() {
+    public function getEntrada() 
+    {
         return $this->select("valor")->first();
+    }
+    
+    public function getLista()
+    {
+        return $this
+                ->where("ativo", 1)
+                ->orderBy("dataEntrada")
+                ->get()
+                ->getResult();
+    }
+
+    public function remove($id) 
+    {
+        $this->builder()->set("ativo", 0)->where("idEntrada", $id)->update();
     }
 }
