@@ -39,4 +39,18 @@ class EntradaModel extends Model {
     {
         $this->builder()->set("ativo", 0)->where("idEntrada", $id)->update();
     }
+
+    public function getConsolidadoGrafico()
+    {
+        $session = session();
+        $periodo = $session->get("periodos");
+
+        return $this->select("SUM(valor) as valor, date_format(dataEntrada, '01/%m/%Y') AS periodo", false)
+                    ->where("dataEntrada >=", $periodo["dataInicio"])
+                    ->where("dataEntrada <=", $periodo["dataFim"])
+                    ->where("ativo", 1)
+                    ->groupBy("periodo")
+                    ->get()
+                    ->getResult();
+    }
 }
