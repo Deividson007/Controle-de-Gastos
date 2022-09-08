@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\EntradaModel;
 use App\Models\FormaPagamentoModel;
 use App\Models\GastoModel;
 use App\Models\TipoGastoModel;
@@ -9,10 +10,16 @@ use App\Models\TipoGastoModel;
 class Controle extends BaseController {
     public function index() {
         $gastoModel = new GastoModel();
-        
+        $entradaModel = new EntradaModel();
+
+        $entrada = $entradaModel->getEntrada();
+        $totalGasto = $gastoModel->somaValor();
+
         $viewData = [
             "tabela" => $gastoModel->getMesAtual(),
-            "total" => $gastoModel->somaValor()
+            "total" => $totalGasto,
+            "totalEntrada" => $entrada,
+            "liquido" => $entrada["valor"] - $totalGasto["valor"]
         ];
 
         return view("controle/index", $viewData);

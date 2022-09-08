@@ -41,18 +41,27 @@
                             </tr>
                         <?php endforeach; ?>
                     </tbody>
-                    <tfooter>
-                        <tr>
-                            <td colspan="3"><strong>Total</strong></td>
-                            <td><strong><?= number_format($total["valor"], 2, ',', '.') ?></strong></td>
-                        </tr>
-                    </tfooter>
                 </table>
             </div>
         </div>
     </div>
     <div class="col-md-6 col-sm-12">
-
+        <div class="card">
+            <div class="card-body">
+                <table class="table table-bordered table-sm">
+                    <tr>
+                        <th width="33.33%">Total Entradas</th>
+                        <th width="33.33%">Total Saídas</td>
+                        <th width="33.33%">Saldo</th>
+                    </tr>
+                    <tr>
+                        <td><strong><?= number_format($totalEntrada["valor"], 2, ',', '.') ?></strong></td>
+                        <td><strong><?= number_format($total["valor"], 2, ',', '.') ?></strong></td>
+                        <td class="<?= $liquido < 0 ? "text-danger" : "text-primary" ?>"><strong><?= number_format($liquido, 2, ',', '.') ?></strong></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
     </div>
 </div>
 

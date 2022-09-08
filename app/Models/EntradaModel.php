@@ -16,7 +16,14 @@ class EntradaModel extends Model {
 
     public function getEntrada() 
     {
-        return $this->select("valor")->first();
+        $session = session();
+        $periodo = $session->get("periodos");
+
+        return $this->select("SUM(valor) as valor", false)
+                    ->where("dataEntrada >=", $periodo["dataInicio"])
+                    ->where("dataEntrada <=", $periodo["dataFim"])
+                    ->where("ativo", 1)
+                    ->first();
     }
     
     public function getLista()
